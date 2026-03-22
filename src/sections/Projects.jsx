@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Container, Row, Col, Card, Badge, Button, ButtonGroup } from 'react-bootstrap';
-import { FaCalendarAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaGithub, FaExternalLinkAlt, FaCalendarAlt } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion'; // Importing AnimatePresence and motion
 import { projects } from '../data/portfolioData';
 import { Link } from 'react-router-dom';
@@ -118,14 +118,16 @@ const Projects = () => {
                                             </div>
                                         </div>
 
-                                        <div className="mt-4 d-flex flex-column gap-2">
+                                        {/* Action Buttons */}
 
-                                            <div className="d-flex gap-2 m-2">
-                                                <Button variant="dark" className="flex-fill rounded-pill" href={project.github} target="_blank">
-                                                    GitHub
+                                        <div className="mt-4 d-flex flex-column gap-2 px-3">
+
+                                            <div className="d-flex gap-2 m-2 align-items-center">
+                                                <Button variant="dark" className="flex-fill rounded-pill " href={project.github} target="_blank">
+                                                    <FaGithub className="m-2 " /> GitHub
                                                 </Button>
-                                                <Button variant="outline-secondary" className="flex-fill rounded-pill" href={project.liveUrl} target="_blank">
-                                                    Demo
+                                                <Button variant="outline-secondary" className="flex-fill rounded-pill " href={project.liveUrl} target="_blank">
+                                                    <FaExternalLinkAlt className="m-2" /> Live Demo
                                                 </Button>
                                             </div>
                                         </div>

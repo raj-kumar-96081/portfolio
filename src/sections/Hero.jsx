@@ -33,7 +33,7 @@ const Hero = () => {
                             </motion.div>
 
                             <h1 className="display-2 fw-bolder mb-3 text-white tracking-tight">
-                                Hi, I'm <span className="text-gradient-cyan">Rajkumar</span>.
+                                Hi, I'm <span className="text-gradient-cyan">Raj Kumar Gupta</span>
                             </h1>
 
                             {/* Typewriter Effect */}

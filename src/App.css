@@ -384,3 +384,160 @@
   color: #22d3ee;
   transform: translateY(-2px);
 }
+
+/* --- Certificates Section --- */
+
+.cert-section-dark {
+  background-color: #1a1b23;
+  /* Keeps the alternating dark slate flow */
+}
+
+.cert-card-dark {
+  background-color: #242933;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hover lift and cyan glow */
+.cert-card-dark:hover {
+  transform: translateY(-8px);
+  border-color: #22d3ee;
+  box-shadow: 0 15px 30px rgba(34, 211, 238, 0.15);
+}
+
+/* The ambient glow behind the icon inside the card */
+.cert-icon-glow {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cert-card-dark:hover .cert-icon-glow {
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+  color: #111827;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* --- Coding Profiles Section --- */
+
+.coding-section-dark {
+  background-color: #111827;
+  /* Darker background to alternate with the previous section */
+}
+
+.coding-card-dark {
+  background-color: #242933;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.coding-card-dark:hover {
+  transform: translateY(-8px);
+  border-color: #22d3ee;
+  box-shadow: 0 15px 30px rgba(34, 211, 238, 0.15);
+}
+
+/* Glass-morphism Stat Boxes */
+.stat-box-dark {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.coding-card-dark:hover .stat-box-dark {
+  background: rgba(34, 211, 238, 0.05);
+  border-color: rgba(34, 211, 238, 0.2);
+}
+
+.stat-value {
+  color: #e5e7eb;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* --- Navigation Bar --- */
+.navbar-glass {
+  background: rgba(17, 24, 39, 0.85) !important; /* Semi-transparent dark slate */
+  backdrop-filter: blur(12px); /* The frosted glass blur */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Custom Nav Links with Animated Underline */
+.nav-link-custom {
+  color: #d1d5db !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 8px 16px !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover, 
+.nav-link-custom.active {
+  color: #22d3ee !important; /* Cyan text on hover */
+}
+
+/* The expanding cyan underline */
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link-custom:hover::after, 
+.nav-link-custom.active::after {
+  width: 70%; /* Expands from the center */
+}
+
+/* --- Footer --- */
+.footer-dark {
+  background-color: #0b0f19; /* The absolute darkest slate to end the page */
+  border-top: 1px solid rgba(34, 211, 238, 0.1);
+}
+
+.footer-social-link {
+  color: #9ca3af;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-social-link:hover {
+  color: #22d3ee;
+  transform: translateY(-4px); /* Slight lift */
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.5)); /* Neon glow */
+}

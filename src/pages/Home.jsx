@@ -4,6 +4,8 @@ import Projects from '../sections/Projects';
 import Contact from '../sections/Contact';
 import Education from '../sections/Education';
 import About from '../sections/About';
+import Certificates from '../sections/Certificates';
+import CodingProfiles from '../sections/CodingProfiles';
 
 const Home = () => {
     return (
@@ -13,6 +15,8 @@ const Home = () => {
             <Education />
             <Skills />
             <Projects />
+            <CodingProfiles />
+            <Certificates />
             <Contact />
         </main>
     );
