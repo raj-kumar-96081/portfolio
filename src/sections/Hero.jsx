@@ -1,29 +1,43 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
+import { FaArrowRight, FaCode } from 'react-icons/fa';
 
 const Hero = () => {
     return (
-        <section id="home" className="d-flex align-items-center vh-100 bg-dark text-white">
-            <Container>
+        <section id="home" className="d-flex align-items-center vh-100 hero-section-dark">
+
+            {/* The Ambient Background Glow */}
+            <div className="hero-glow"></div>
+
+            <Container className="position-relative z-1">
                 <Row className="align-items-center justify-content-center text-center">
-                    <Col lg={9} md={10}>
-                        {/* Framer Motion wrapper for load-in animation */}
+                    <Col lg={10} md={12}>
+
+                        {/* Main Content Animation Wrapper */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                            <p className="text-info fw-bold tracking-wider mb-2 text-uppercase">
-                                Welcome to my portfolio
-                            </p>
 
-                            <h1 className="display-2 fw-bolder mb-3">
-                                Hi, I'm <span className="text-info">Rajkumar</span>.
+                            {/* Top accent badge */}
+                            <motion.div
+                                className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-4"
+                                style={{ background: 'rgba(34, 211, 238, 0.1)', border: '1px solid rgba(34, 211, 238, 0.2)' }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.2, duration: 0.5 }}
+                            >
+                                <span className="text-cyan small"><span className="fw-bold">HELLO</span> WORLD</span>
+                            </motion.div>
+
+                            <h1 className="display-2 fw-bolder mb-3 text-white tracking-tight">
+                                Hi, I'm <span className="text-gradient-cyan">Rajkumar</span>.
                             </h1>
 
-                            {/* Typewriter Effect Container */}
-                            <div className="display-6 fw-normal text-secondary mb-4" style={{ minHeight: '60px' }}>
+                            {/* Typewriter Effect */}
+                            <div className="display-6 fw-semibold mb-4" style={{ minHeight: '60px', color: '#9ca3af' }}>
                                 <Typewriter
                                     options={{
                                         strings: [
@@ -40,20 +54,27 @@ const Hero = () => {
                                 />
                             </div>
 
-                            <p className="lead mb-5 px-md-5 text-light opacity-75">
+                            <p className="lead mb-5 px-md-5 mx-auto" style={{ maxWidth: '800px', color: '#6b7280', lineHeight: '1.8' }}>
                                 I specialize in architecting scalable web applications using the MERN stack,
                                 solving complex algorithmic challenges in C++, and building data-driven
-                                predictive models with Python.
+                                predictive models.
                             </p>
 
-                            <div className="d-flex justify-content-center gap-3">
-                                <Button variant="info" size="lg" href="#projects" className="px-4 py-2 fw-semibold">
-                                    View My Projects
-                                </Button>
-                                <Button variant="outline-light" size="lg" href="#contact" className="px-4 py-2 fw-semibold">
-                                    Get In Touch
-                                </Button>
-                            </div>
+                            {/* Call to Action Buttons */}
+                            <motion.div
+                                className="d-flex flex-wrap justify-content-center gap-3"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.4, duration: 0.5 }}
+                            >
+                                <a href="#projects" className="btn btn-cyan-gradient btn-lg px-4 py-3 rounded-pill d-flex align-items-center gap-2 text-decoration-none">
+                                    <FaCode /> View My Projects
+                                </a>
+                                <a href="#contact" className="btn btn-glass btn-lg px-4 py-3 rounded-pill d-flex align-items-center gap-2 text-decoration-none">
+                                    Get In Touch <FaArrowRight />
+                                </a>
+                            </motion.div>
+
                         </motion.div>
                     </Col>
                 </Row>
@@ -64,63 +85,4 @@ const Hero = () => {
 
 export default Hero;
 
-// import { Container, Row, Col, Button } from 'react-bootstrap';
 
-// const Hero = () => {
-//     return (
-//         <section
-//             id="home"
-//             className="d-flex align-items-center vh-100 bg-dark text-white"
-//         >
-//             <Container>
-//                 <Row className="align-items-center justify-content-center text-center">
-//                     <Col lg={9} md={10}>
-//                         {/* Greeting */}
-//                         <p className="text-info fw-bold tracking-wider mb-2 text-uppercase">
-//                             Welcome to my portfolio
-//                         </p>
-
-//                         {/* Name */}
-//                         <h1 className="display-2 fw-bolder mb-3">
-//                             Hi, I'm <span className="text-info">Rajkumar</span>.
-//                         </h1>
-
-//                         {/* Academic / Professional Title */}
-//                         <h2 className="display-6 fw-normal text-secondary mb-4">
-//                             3rd-Year B.Tech CSE Student
-//                         </h2>
-
-//                         {/* Brief Value Proposition */}
-//                         <p className="lead mb-5 px-md-5 text-light opacity-75">
-//                             I specialize in architecting scalable web applications using the MERN stack,
-//                             solving complex algorithmic challenges in C++, and building data-driven
-//                             predictive models with Python.
-//                         </p>
-
-//                         {/* Calls to Action */}
-//                         <div className="d-flex justify-content-center gap-3">
-//                             <Button
-//                                 variant="info"
-//                                 size="lg"
-//                                 href="#projects"
-//                                 className="px-4 py-2 fw-semibold"
-//                             >
-//                                 View My Projects
-//                             </Button>
-//                             <Button
-//                                 variant="outline-light"
-//                                 size="lg"
-//                                 href="#contact"
-//                                 className="px-4 py-2 fw-semibold"
-//                             >
-//                                 Get In Touch
-//                             </Button>
-//                         </div>
-//                     </Col>
-//                 </Row>
-//             </Container>
-//         </section>
-//     );
-// };
-
-// export default Hero;

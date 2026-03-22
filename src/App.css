@@ -15,3 +15,372 @@
   /* Bootstrap info color */
   transform: translateY(-3px);
 }
+
+/* Dark Theme Overrides for Projects Section */
+.projects-section-dark {
+  background-color: #1a1b23;
+  /* Dark background from image */
+  color: white;
+}
+
+.project-title-accent {
+  color: #f97316;
+  /* Orange title */
+  letter-spacing: 4px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 3px;
+  background-color: #0dcaf0;
+  /* Cyan underline */
+  margin: 0 auto;
+}
+
+/* Glowing Filter Buttons */
+.filter-btn-custom {
+  background-color: #374151;
+  color: #d1d5db;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn-custom:hover {
+  background-color: #4b5563;
+  color: white;
+}
+
+.filter-btn-custom.active {
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+  color: #111827;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* Dark Project Card */
+.dark-project-card {
+  background-color: #242933 !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  border: 1px solid #374151 !important;
+}
+
+.card-img-top-custom {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #374151;
+}
+
+.text-cyan {
+  color: #22d3ee !important;
+  /* The specific teal/cyan from the image */
+}
+
+/* Tech Badges */
+.tech-badge-dark {
+  background-color: #374151 !important;
+  color: #e5e7eb !important;
+  font-weight: 500 !important;
+  padding: 8px 16px !important;
+  border-radius: 50px !important;
+}
+
+/* Update your existing .dark-project-card or add this new snippet */
+.dark-project-card {
+  /* ... keep your existing properties ... */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  /* Premium 'pop' timing */
+}
+
+/* New Hover Effect */
+.dark-project-card:hover {
+  transform: translateY(-12px) scale(1.02) !important;
+  /* Lifts up and grows slightly */
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.15) !important;
+  /* Subtle cyan glow */
+  border-color: #22d3ee !important;
+  /* Border turns cyan */
+}
+
+/* Ensure images scale nicely on hover too */
+.dark-project-card:hover .card-img-top-custom {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.card-img-top-custom {
+  transition: transform 0.4s ease;
+}
+
+/* --- Technical Skills Section Overrides --- */
+
+.skills-section-dark {
+  background-color: #1a1b23;
+  /* Dark Slate background from image */
+}
+
+/* Copper/Orange Title & Cyan Underline */
+.skills-title-accent {
+  color: #c2674e !important;
+  /* Specific title color from image */
+  letter-spacing: 4px;
+}
+
+.skills-title-underline {
+  width: 60px;
+  height: 3px;
+  background-color: #0dcaf0;
+  /* Cyan-Teal underline from image */
+  margin: 0 auto;
+}
+
+/* Base Skill Card Style */
+.skill-card {
+  background-color: #242933;
+  /* Slightly lighter than the section background */
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition fallback */
+}
+
+/* Uniform icon size and color */
+.icon-container-glow {
+  font-size: 3.5rem;
+  /* Standardizes icon size */
+  color: #e5e7eb;
+  /* Soft white by default */
+}
+
+
+/* --- Education Timeline Section --- */
+
+.education-section-dark {
+  background-color: #1a1b23;
+  /* Matching the main dark slate background */
+}
+
+/* The vertical connecting line */
+.education-timeline {
+  position: relative;
+  padding-left: 3rem;
+  /* Space for the line and icons */
+  margin-left: 1rem;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #374151;
+  /* Subtle dark gray line */
+}
+
+/* The Icon Nodes */
+.timeline-icon-container {
+  position: absolute;
+  left: -1.1rem;
+  /* Centers the icon exactly on the 2px line */
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+  /* Cyan/Teal gradient */
+  color: #111827;
+  /* Dark icon color for contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+/* The Education Card */
+.education-card {
+  background-color: #242933;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hover effect matching your Projects section */
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(34, 211, 238, 0.1);
+  border-color: #22d3ee;
+}
+
+.score-text {
+  color: #22d3ee;
+  /* The specific cyan text color */
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
+}
+
+/* --- About Section Overrides --- */
+.about-section-dark {
+  background-color: #1a1b23;
+  /* Core dark slate background */
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  padding: 10px;
+  /* Soft cyan gradient border effect */
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2) 0%, rgba(6, 182, 212, 0.05) 100%);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-image-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(34, 211, 238, 0.25);
+  border-color: rgba(34, 211, 238, 0.6);
+}
+
+.about-image {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.about-highlight {
+  color: #22d3ee;
+  /* Cyan accent color */
+  font-weight: 600;
+}
+
+/* --- Contact Section Overrides --- */
+.contact-section-dark {
+  background-color: #1a1b23;
+  /* Core dark slate background */
+}
+
+/* Dark layout cards for contact info and the form */
+.contact-card-dark {
+  background-color: #242933;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-card-dark:hover {
+  transform: translateY(-5px);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 15px 30px rgba(34, 211, 238, 0.1);
+}
+
+/* Glowing circular icons for Email/Location */
+.icon-box-glow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+/* Custom Dark Form Inputs */
+.custom-input-dark {
+  background-color: #111827 !important;
+  /* Deep dark background */
+  border: 1px solid #374151 !important;
+  color: #e5e7eb !important;
+  /* Light gray text */
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-input-dark::placeholder {
+  color: #6b7280 !important;
+  /* Muted placeholder */
+}
+
+.custom-input-dark:focus {
+  border-color: #22d3ee !important;
+  /* Cyan border on click */
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.15) !important;
+  /* Cyan outer glow */
+  outline: none;
+}
+
+/* Submit Button Gradient */
+.btn-cyan-gradient {
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+  color: #111827;
+  border: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-cyan-gradient:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+  color: #000;
+}
+
+/* --- Hero Section Overrides --- */
+
+.hero-section-dark {
+  background-color: #111827;
+  /* Slightly darker than the rest of the site for depth */
+  position: relative;
+  overflow: hidden;
+}
+
+/* The ambient light behind the text */
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.12) 0%, rgba(17, 24, 39, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+  /* Allows clicking through to buttons */
+}
+
+/* Clips the gradient to the text of your name */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Frosted glass secondary button */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(34, 211, 238, 0.5);
+  color: #22d3ee;
+  transform: translateY(-2px);
+}

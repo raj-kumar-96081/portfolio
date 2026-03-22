@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -11,19 +11,15 @@ const Contact = () => {
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // Handle input changes
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Simulate form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here is where you would hook up EmailJS or a backend endpoint
         console.log('Form submitted:', formData);
         setIsSubmitted(true);
 
-        // Reset form after a few seconds
         setTimeout(() => {
             setIsSubmitted(false);
             setFormData({ name: '', email: '', message: '' });
@@ -31,68 +27,87 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-5 bg-white">
-            <Container>
+        <section id="contact" className="py-5 contact-section-dark min-vh-100 d-flex align-items-center">
+            <Container className="py-5">
+
+                {/* Section Header */}
                 <div className="text-center mb-5">
-                    <h2 className="fw-bold">Get In Touch</h2>
-                    <p className="text-muted lead">Open for software engineering internships and collaborative projects.</p>
+                    {/* Reusing the Copper/Cyan title styles */}
+                    <h2 className="fw-bolder text-uppercase skills-title-accent mb-3">Get In Touch</h2>
+                    <div className="skills-title-underline mb-4"></div>
+                    <p className="text-muted lead" style={{ fontSize: '1.05rem' }}>
+                        Open for opportunities, internships, and collaborative projects.
+                    </p>
                 </div>
 
-                <Row className="justify-content-center">
-                    {/* Contact Information Column */}
-                    <Col lg={4} md={5} className="mb-4 mb-md-0">
+                <Row className="justify-content-center g-4">
+
+                    {/* Contact Information Column - Slides in from the left */}
+                    <Col lg={4} md={5}>
                         <motion.div
-                            className="h-100 p-4 bg-light rounded shadow-sm border-0"
-                            initial={{ opacity: 0, x: -30 }}
+                            className="h-100 p-4 contact-card-dark d-flex flex-column"
+                            initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <h4 className="fw-bold mb-4">Contact Details</h4>
+                            <h4 className="fw-bold mb-4 text-light">Contact Details</h4>
 
                             <div className="d-flex align-items-center mb-4">
-                                <div className="bg-info text-dark rounded-circle p-3 me-3 d-flex align-items-center justify-content-center">
-                                    <FaEnvelope size={20} />
+                                <div className="icon-box-glow me-3">
+                                    <FaEnvelope />
                                 </div>
                                 <div>
                                     <p className="mb-0 text-muted small">Email</p>
-                                    <a href="mailto:your.email@example.com" className="text-dark fw-semibold text-decoration-none">
+                                    <a href="mailto:hello@rajkumar.dev" className="text-info fw-semibold text-decoration-none">
                                         hello@rajkumar.dev
                                     </a>
                                 </div>
                             </div>
 
-                            <div className="d-flex align-items-center">
-                                <div className="bg-info text-dark rounded-circle p-3 me-3 d-flex align-items-center justify-content-center">
-                                    <FaMapMarkerAlt size={20} />
+                            <div className="d-flex align-items-center mb-5">
+                                <div className="icon-box-glow me-3">
+                                    <FaMapMarkerAlt />
                                 </div>
                                 <div>
                                     <p className="mb-0 text-muted small">Location</p>
-                                    <p className="text-dark fw-semibold mb-0">India</p>
+                                    <p className="text-light fw-semibold mb-0">India</p>
                                 </div>
+                            </div>
+
+                            <hr className="border-secondary mb-4" />
+
+                            <h5 className="text-light fw-semibold mb-3">Social Profiles</h5>
+                            <div className="d-flex gap-3 mt-auto">
+                                <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="icon-box-glow text-decoration-none">
+                                    <FaGithub />
+                                </a>
+                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="icon-box-glow text-decoration-none">
+                                    <FaLinkedin />
+                                </a>
                             </div>
                         </motion.div>
                     </Col>
 
-                    {/* The Form Column */}
+                    {/* The Form Column - Slides in from the right */}
                     <Col lg={6} md={7}>
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
+                            initial={{ opacity: 0, x: 40 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                         >
                             {isSubmitted && (
-                                <Alert variant="success" className="mb-4">
+                                <Alert variant="info" className="mb-4 bg-info bg-opacity-10 border-info text-info">
                                     Message sent successfully! I will get back to you soon.
                                 </Alert>
                             )}
 
-                            <Form onSubmit={handleSubmit} className="p-4 bg-white shadow-sm border rounded">
+                            <Form onSubmit={handleSubmit} className="p-4 p-md-5 contact-card-dark">
                                 <Row>
                                     <Col sm={6}>
-                                        <Form.Group className="mb-3" controlId="formName">
-                                            <Form.Label className="fw-semibold text-muted small">Name</Form.Label>
+                                        <Form.Group className="mb-4" controlId="formName">
+                                            <Form.Label className="fw-medium text-light small mb-2">Your Name</Form.Label>
                                             <Form.Control
                                                 type="text"
                                                 name="name"
@@ -100,13 +115,13 @@ const Contact = () => {
                                                 onChange={handleChange}
                                                 placeholder="John Doe"
                                                 required
-                                                className="bg-light border-0 py-2"
+                                                className="custom-input-dark shadow-none"
                                             />
                                         </Form.Group>
                                     </Col>
                                     <Col sm={6}>
-                                        <Form.Group className="mb-3" controlId="formEmail">
-                                            <Form.Label className="fw-semibold text-muted small">Email Address</Form.Label>
+                                        <Form.Group className="mb-4" controlId="formEmail">
+                                            <Form.Label className="fw-medium text-light small mb-2">Email Address</Form.Label>
                                             <Form.Control
                                                 type="email"
                                                 name="email"
@@ -114,14 +129,14 @@ const Contact = () => {
                                                 onChange={handleChange}
                                                 placeholder="john@example.com"
                                                 required
-                                                className="bg-light border-0 py-2"
+                                                className="custom-input-dark shadow-none"
                                             />
                                         </Form.Group>
                                     </Col>
                                 </Row>
 
-                                <Form.Group className="mb-4" controlId="formMessage">
-                                    <Form.Label className="fw-semibold text-muted small">Message</Form.Label>
+                                <Form.Group className="mb-5" controlId="formMessage">
+                                    <Form.Label className="fw-medium text-light small mb-2">Message</Form.Label>
                                     <Form.Control
                                         as="textarea"
                                         rows={5}
@@ -130,11 +145,11 @@ const Contact = () => {
                                         onChange={handleChange}
                                         placeholder="How can we work together?"
                                         required
-                                        className="bg-light border-0"
+                                        className="custom-input-dark shadow-none"
                                     />
                                 </Form.Group>
 
-                                <Button variant="dark" type="submit" className="w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2">
+                                <Button type="submit" className="w-100 py-3 btn-cyan-gradient rounded-pill d-flex align-items-center justify-content-center gap-2">
                                     <FaPaperPlane /> Send Message
                                 </Button>
                             </Form>
@@ -147,3 +162,154 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+// import { useState } from 'react';
+// import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+// import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+// import { motion } from 'framer-motion';
+
+// const Contact = () => {
+//     const [formData, setFormData] = useState({
+//         name: '',
+//         email: '',
+//         message: ''
+//     });
+//     const [isSubmitted, setIsSubmitted] = useState(false);
+
+//     // Handle input changes
+//     const handleChange = (e) => {
+//         setFormData({ ...formData, [e.target.name]: e.target.value });
+//     };
+
+//     // Simulate form submission
+//     const handleSubmit = (e) => {
+//         e.preventDefault();
+//         // Here is where you would hook up EmailJS or a backend endpoint
+//         console.log('Form submitted:', formData);
+//         setIsSubmitted(true);
+
+//         // Reset form after a few seconds
+//         setTimeout(() => {
+//             setIsSubmitted(false);
+//             setFormData({ name: '', email: '', message: '' });
+//         }, 4000);
+//     };
+
+//     return (
+//         <section id="contact" className="py-5 bg-white">
+//             <Container>
+//                 <div className="text-center mb-5">
+//                     <h2 className="fw-bold">Get In Touch</h2>
+//                     <p className="text-muted lead">Open for software engineering internships and collaborative projects.</p>
+//                 </div>
+
+//                 <Row className="justify-content-center">
+//                     {/* Contact Information Column */}
+//                     <Col lg={4} md={5} className="mb-4 mb-md-0">
+//                         <motion.div
+//                             className="h-100 p-4 bg-light rounded shadow-sm border-0"
+//                             initial={{ opacity: 0, x: -30 }}
+//                             whileInView={{ opacity: 1, x: 0 }}
+//                             viewport={{ once: true }}
+//                             transition={{ duration: 0.5 }}
+//                         >
+//                             <h4 className="fw-bold mb-4">Contact Details</h4>
+
+//                             <div className="d-flex align-items-center mb-4">
+//                                 <div className="bg-info text-dark rounded-circle p-3 me-3 d-flex align-items-center justify-content-center">
+//                                     <FaEnvelope size={20} />
+//                                 </div>
+//                                 <div>
+//                                     <p className="mb-0 text-muted small">Email</p>
+//                                     <a href="mailto:your.email@example.com" className="text-dark fw-semibold text-decoration-none">
+//                                         hello@rajkumar.dev
+//                                     </a>
+//                                 </div>
+//                             </div>
+
+//                             <div className="d-flex align-items-center">
+//                                 <div className="bg-info text-dark rounded-circle p-3 me-3 d-flex align-items-center justify-content-center">
+//                                     <FaMapMarkerAlt size={20} />
+//                                 </div>
+//                                 <div>
+//                                     <p className="mb-0 text-muted small">Location</p>
+//                                     <p className="text-dark fw-semibold mb-0">India</p>
+//                                 </div>
+//                             </div>
+//                         </motion.div>
+//                     </Col>
+
+//                     {/* The Form Column */}
+//                     <Col lg={6} md={7}>
+//                         <motion.div
+//                             initial={{ opacity: 0, x: 30 }}
+//                             whileInView={{ opacity: 1, x: 0 }}
+//                             viewport={{ once: true }}
+//                             transition={{ duration: 0.5, delay: 0.2 }}
+//                         >
+//                             {isSubmitted && (
+//                                 <Alert variant="success" className="mb-4">
+//                                     Message sent successfully! I will get back to you soon.
+//                                 </Alert>
+//                             )}
+
+//                             <Form onSubmit={handleSubmit} className="p-4 bg-white shadow-sm border rounded">
+//                                 <Row>
+//                                     <Col sm={6}>
+//                                         <Form.Group className="mb-3" controlId="formName">
+//                                             <Form.Label className="fw-semibold text-muted small">Name</Form.Label>
+//                                             <Form.Control
+//                                                 type="text"
+//                                                 name="name"
+//                                                 value={formData.name}
+//                                                 onChange={handleChange}
+//                                                 placeholder="John Doe"
+//                                                 required
+//                                                 className="bg-light border-0 py-2"
+//                                             />
+//                                         </Form.Group>
+//                                     </Col>
+//                                     <Col sm={6}>
+//                                         <Form.Group className="mb-3" controlId="formEmail">
+//                                             <Form.Label className="fw-semibold text-muted small">Email Address</Form.Label>
+//                                             <Form.Control
+//                                                 type="email"
+//                                                 name="email"
+//                                                 value={formData.email}
+//                                                 onChange={handleChange}
+//                                                 placeholder="john@example.com"
+//                                                 required
+//                                                 className="bg-light border-0 py-2"
+//                                             />
+//                                         </Form.Group>
+//                                     </Col>
+//                                 </Row>
+
+//                                 <Form.Group className="mb-4" controlId="formMessage">
+//                                     <Form.Label className="fw-semibold text-muted small">Message</Form.Label>
+//                                     <Form.Control
+//                                         as="textarea"
+//                                         rows={5}
+//                                         name="message"
+//                                         value={formData.message}
+//                                         onChange={handleChange}
+//                                         placeholder="How can we work together?"
+//                                         required
+//                                         className="bg-light border-0"
+//                                     />
+//                                 </Form.Group>
+
+//                                 <Button variant="dark" type="submit" className="w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2">
+//                                     <FaPaperPlane /> Send Message
+//                                 </Button>
+//                             </Form>
+//                         </motion.div>
+//                     </Col>
+//                 </Row>
+//             </Container>
+//         </section>
+//     );
+// };
+
+// export default Contact;
