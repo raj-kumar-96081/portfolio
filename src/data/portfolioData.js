@@ -29,7 +29,7 @@ export const projects = [
         ],
         technologies: ['React.js', 'Express.js', 'MongoDB', 'Chart.js'],
         github: 'https://github.com/raj-kumar-96081/Expense-react-frontend',
-        liveUrl: '#',
+        liveUrl: 'https://expense-manager-app-sepia.vercel.app/',
     },
     {
         id: 'ipl-predictor',
