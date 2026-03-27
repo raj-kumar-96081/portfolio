@@ -12,7 +12,7 @@ export const projects = [
             'Designed responsive UI with React-Bootstrap and dynamic state management.'
         ],
         technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Socket.io'],
-        github: 'https://github.com/yourusername/ride-share',
+        github: 'httphttps://github.com/raj-kumar-96081/Ride-Sharing-Simulation-',
         liveUrl: '#',
     },
     {
@@ -28,7 +28,7 @@ export const projects = [
             'Streamlined deployment using Render and Vercel.'
         ],
         technologies: ['React.js', 'Express.js', 'MongoDB', 'Chart.js'],
-        github: 'https://github.com/yourusername/expense-manager',
+        github: 'https://github.com/raj-kumar-96081/Expense-react-frontend',
         liveUrl: '#',
     },
     {

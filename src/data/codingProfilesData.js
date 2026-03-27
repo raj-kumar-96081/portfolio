@@ -12,7 +12,7 @@ export const codingProfilesData = [
       { label: 'Max Rating', value: '1650' },
       { label: 'Top', value: '10%' }
     ],
-    link: 'https://leetcode.com/u/yourusername/',
+    link: 'https://leetcode.com/u/RAJ_KUMAR_GUPTA/',
   },
   {
     id: 2,
@@ -25,6 +25,6 @@ export const codingProfilesData = [
       { label: 'Max Rating', value: '1500' },
       { label: 'Contests', value: '45' }
     ],
-    link: 'https://codeforces.com/profile/yourusername',
+    link: 'https://codeforces.com/profile/rl7031177',
   }
 ];
