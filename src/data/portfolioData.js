@@ -12,7 +12,7 @@ export const projects = [
             'Designed responsive UI with React-Bootstrap and dynamic state management.'
         ],
         technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Socket.io'],
-        github: 'httphttps://github.com/raj-kumar-96081/Ride-Sharing-Simulation-',
+        github: 'https://github.com/raj-kumar-96081/Ride-Sharing-Simulation-',
         liveUrl: '#',
     },
     {
