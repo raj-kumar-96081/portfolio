@@ -24,7 +24,7 @@ const NavBar = () => {
 
             {/* Optional: A small highlighted button for Resume right in the nav */}
             <Nav.Link
-              href="src\assets\Specialized cv updated.pdf"
+              href="public\Specialized cv updated.pdf"
               target="_blank"
               className="btn btn-outline-info rounded-pill px-4 ms-lg-3 mt-2 mt-lg-0 fw-semibold"
               style={{ padding: '6px 16px' }}

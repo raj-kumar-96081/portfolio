@@ -26,7 +26,7 @@ const About = () => {
                         <div className="about-image-wrapper mx-auto" style={{ maxWidth: '420px' }}>
                             <img
                                 // REPLACE THIS LINK WITH YOUR ACTUAL IMAGE PATH
-                                src="src\assets\InShot_20260329_202214517.jpg.jpeg"
+                                src="public\InShot_20260329_202214517.jpg.jpeg"
                                 alt="Rajkumar"
                                 className="about-image shadow"
                             />
@@ -69,7 +69,7 @@ const About = () => {
 
                             <Button
                                 variant="outline-info"
-                                href="src\assets\Specialized cv updated.pdf" // Ensure your resume is in the public folder
+                                href="public\Specialized cv updated.pdf" // Ensure your resume is in the public folder
                                 target="_blank"
                                 className="px-4 py-2 fw-bold d-flex align-items-center rounded-pill"
                             >
