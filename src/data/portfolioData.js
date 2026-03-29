@@ -44,7 +44,7 @@ export const projects = [
             'Achieved a high accuracy rate in simulating score outcomes.'
         ],
         technologies: ['Python', 'Pandas', 'Scikit-learn', 'Jupyter'],
-        github: 'https://github.com/yourusername/ipl-predictor',
+        github: 'https://github.com/raj-kumar-96081/IPL-Score-Predictor',
         liveUrl: '#',
     }
 ];

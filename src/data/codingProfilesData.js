@@ -8,9 +8,9 @@ export const codingProfilesData = [
     username: '@rajkumar', // Replace with your username
     glowColor: 'rgba(255, 161, 22, 0.5)', // LeetCode Orange
     stats: [
-      { label: 'Problems Solved', value: '450+' },
-      { label: 'Max Rating', value: '1650' },
-      { label: 'Top', value: '10%' }
+      { label: 'Problems Solved', value: '150+' },
+      { label: 'Max Rating', value: '800' },
+      { label: 'Top', value: '30%' }
     ],
     link: 'https://leetcode.com/u/RAJ_KUMAR_GUPTA/',
   },
@@ -21,9 +21,9 @@ export const codingProfilesData = [
     username: '@rajkumar', // Replace with your username
     glowColor: 'rgba(31, 138, 203, 0.5)', // Codeforces Blue
     stats: [
-      { label: 'Rating', value: '1420' },
-      { label: 'Max Rating', value: '1500' },
-      { label: 'Contests', value: '45' }
+      { label: 'Rating', value: '968' },
+      { label: 'Max Rating', value: '1088' },
+      { label: 'Contests', value: '12' }
     ],
     link: 'https://codeforces.com/profile/rl7031177',
   }

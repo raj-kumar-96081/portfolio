@@ -26,7 +26,7 @@ const About = () => {
                         <div className="about-image-wrapper mx-auto" style={{ maxWidth: '420px' }}>
                             <img
                                 // REPLACE THIS LINK WITH YOUR ACTUAL IMAGE PATH
-                                src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?q=80&w=800&auto=format&fit=crop"
+                                src="src\assets\InShot_20260329_202214517.jpg.jpeg"
                                 alt="Rajkumar"
                                 className="about-image shadow"
                             />
@@ -53,9 +53,9 @@ const About = () => {
                             I specialize in full-stack development using the <span className="text-light fw-medium">MERN stack</span>, building everything from dynamic ride-sharing platforms to secure financial expense trackers. Beyond web development, I am heavily invested in <span className="text-light fw-medium">Machine Learning</span> and solving complex algorithmic puzzles through <span className="text-light fw-medium">Competitive Programming</span> in C++.
                         </p>
 
-                        <p className="text-light mb-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                        {/* <p className="text-light mb-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
                             When I'm not writing code or analyzing data models, you can find me <span className="text-light fw-medium">powerlifting</span>—applying the same discipline, consistency, and drive for incremental progress that I bring to my software engineering projects.
-                        </p>
+                        </p> */}
 
                         {/* Action Buttons */}
                         <div className="d-flex flex-wrap gap-3">
