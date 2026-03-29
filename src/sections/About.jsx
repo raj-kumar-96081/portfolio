@@ -69,7 +69,7 @@ const About = () => {
 
                             <Button
                                 variant="outline-info"
-                                href="/Rajkumar_Resume.pdf" // Ensure your resume is in the public folder
+                                href="src\assets\Specialized cv updated.pdf" // Ensure your resume is in the public folder
                                 target="_blank"
                                 className="px-4 py-2 fw-bold d-flex align-items-center rounded-pill"
                             >

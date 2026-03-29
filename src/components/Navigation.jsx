@@ -10,9 +10,9 @@ const NavBar = () => {
           <span className="text-gradient-cyan">Raj Kumar Gupta</span>
           <span className="text-light"> /&gt;</span>
         </Navbar.Brand>
-        
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 shadow-none" />
-        
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-2">
             <Nav.Link href="#home" className="nav-link-custom">Home</Nav.Link>
@@ -21,10 +21,10 @@ const NavBar = () => {
             <Nav.Link href="#education" className="nav-link-custom">Education</Nav.Link>
             <Nav.Link href="#projects" className="nav-link-custom">Projects</Nav.Link>
             <Nav.Link href="#contact" className="nav-link-custom">Contact</Nav.Link>
-            
+
             {/* Optional: A small highlighted button for Resume right in the nav */}
-            <Nav.Link 
-              href="/Rajkumar_Resume.pdf" 
+            <Nav.Link
+              href="src\assets\Specialized cv updated.pdf"
               target="_blank"
               className="btn btn-outline-info rounded-pill px-4 ms-lg-3 mt-2 mt-lg-0 fw-semibold"
               style={{ padding: '6px 16px' }}

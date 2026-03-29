@@ -65,8 +65,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="mb-0 text-muted small">Email</p>
-                                    <a href="mailto:hello@rajkumar.dev" className="text-info fw-semibold text-decoration-none">
-                                        hello@rajkumar.dev
+                                    <a href="mailto:rl7031177@gmail.com" className="text-info fw-semibold text-decoration-none">
+                                        Raj Kumar Gupta
                                     </a>
                                 </div>
                             </div>
@@ -85,10 +85,10 @@ const Contact = () => {
 
                             <h5 className="text-light fw-semibold mb-3">Social Profiles</h5>
                             <div className="d-flex gap-3 mt-auto">
-                                <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="icon-box-glow text-decoration-none">
+                                <a href="https://github.com/raj-kumar-96081/" target="_blank" rel="noreferrer" className="icon-box-glow text-decoration-none">
                                     <FaGithub />
                                 </a>
-                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="icon-box-glow text-decoration-none">
+                                <a href="https://www.linkedin.com/in/raj-kumar-gupta-39c/" target="_blank" rel="noreferrer" className="icon-box-glow text-decoration-none">
                                     <FaLinkedin />
                                 </a>
                             </div>
