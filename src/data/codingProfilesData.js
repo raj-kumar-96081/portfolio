@@ -9,7 +9,7 @@ export const codingProfilesData = [
     glowColor: 'rgba(255, 161, 22, 0.5)', // LeetCode Orange
     stats: [
       { label: 'Problems Solved', value: '150+' },
-      { label: 'Max Rating', value: '800' },
+      { label: 'Max Rating', value: '1542' },
       { label: 'Top', value: '30%' }
     ],
     link: 'https://leetcode.com/u/RAJ_KUMAR_GUPTA/',
